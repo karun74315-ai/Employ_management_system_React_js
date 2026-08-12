@@ -1,11 +1,25 @@
 import React from 'react'
 
 function Login() {
+  const submitHandler = (e)=>{
+    e.preventDefault()
+    console.log('jiii')
+  }  
+
   return (
-    <div className='flex items-center justify-center'>
-      <div className=' border-2 border-red-600'>
-        <form action="">
-          <input type="text" />
+    <div className='flex h-screen w-screen items-center justify-center'>
+      <div className=' border-2 border-emerald-600 p-30 rounded-xl'>
+        <form onSubmit={(e)=>{
+          submitHandler(e)
+        }}
+        
+        action="" className='flex flex-col items-center justify-center '>
+          <input required className='border-2 border-emerald-600 rounded-full px-15 py-4 text-xl
+           text-black outline-none bg-transparent placeholder:text-gray-400' type="email" placeholder='Enter your email ' />
+          <input className='border-2 border-emerald-600 rounded-full px-15 py-4 text-xl
+           text-black outline-none bg-transparent placeholder:text-gray-400 mt-3' type="password" placeholder='Enter your password' />
+          <button  className=' cursor-pointer border-2  rounded-3xl px-35 py-2 text-xl
+           text-white outline-none bg-emerald-500 placeholder:text-white mt-2.5 border-none'>Login</button>
         </form>
       </div>
     </div>
