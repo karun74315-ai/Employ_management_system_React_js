@@ -4,3 +4,9 @@
    
     display: none;
 }
+
+
+#alltsk::-webkit-scrollbar{
+   
+    display: none;
+}

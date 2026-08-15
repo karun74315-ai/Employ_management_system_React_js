@@ -8,8 +8,8 @@ function App() {
     <>
      
      {/* <Login /> */}
-     <EmployDashboard />
-     <AdminDashboard />
+     {/* <EmployDashboard /> */}
+     {/* <AdminDashboard /> */}
     </>
   )
 }
