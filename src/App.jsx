@@ -1,19 +1,31 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from './Components/Auth/Login'
 import EmployDashboard from './Components/Dashboard/EmployDashboard'
 import AdminDashboard from './Components/Dashboard/AdminDashboard'
 import { getLocalStorage, setLocalStorage } from './Utils/LocalStorage'
 
-function App() {
-  useEffect(()=>{
-    setLocalStorage()
-    getLocalStorage()
-  },)
+const   App = ()=> {
 
+ const[user, setUser]  = useState(null)
+
+ const handleLogin = (email,password)=>{
+      
+      if(email=='admin@me.com' && password == 123){
+           setUser('admin')
+      }else if(email=='user@me.com' && password == 123){
+        setUser('employee') 
+      }
+      else{
+        alert('invalid')
+      }    
+ }
   return (
     <>
      
-     <Login />
+    {
+      !user?  <Login handleLogin={handleLogin} />:''
+    }
+    { user == 'admin' ? <AdminDashboard /> : <EmployDashboard />}
      {/* <EmployDashboard /> */}
      {/* <AdminDashboard /> */}
     </>
