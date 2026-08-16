@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Children } from 'react'
 
-function Task() {
+const Task = ({children}) => {
   return (
     <div>
-      
+      {children}
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Auth() {
+const Auth = ({children}) => {
   return (
     <div>
-      
+      {children}
     </div>
   )
 }
