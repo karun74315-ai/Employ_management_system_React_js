@@ -314,7 +314,7 @@ export const getLocalStorage = ()=>{
     const admin =  JSON.parse(localStorage.getItem('admin'))
   
 
-    console.log(employees , admin);
+    return {employees, admin}
     
      
 }
