@@ -13,10 +13,10 @@ console.log(authdata)
 
  const handleLogin = (email,password)=>{
       
-      if(email=='admin@me.com' && password == 123){
+      if(email==='admin@me.com' && password === "123"){
            setUser('admin')
-      }else if(authdata && authdata.emmployees.find((e)=>{})){
-        setUser('employee') 
+      }else if(authdata && authdata.employees.find((e) => e.email == email && e.password== password)){
+        setUser('employees') 
       }
       else{
         alert('invalid')
@@ -26,9 +26,11 @@ console.log(authdata)
     <>
      
     {
-      !user?  <Login handleLogin={handleLogin} />:''
+      !user ? ( <Login handleLogin={handleLogin} /> ) : (
+        user == 'admin' ? <AdminDashboard /> : <EmployDashboard />
+      )
     }
-    { user == 'admin' ? <AdminDashboard /> : <EmployDashboard />}
+    
      
     </>
   )
