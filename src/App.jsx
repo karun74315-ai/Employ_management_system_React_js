@@ -15,7 +15,7 @@ console.log(authdata)
       
       if(email=='admin@me.com' && password == 123){
            setUser('admin')
-      }else if(email=='user@me.com' && password == 123){
+      }else if(authdata && authdata.emmployees.find((e)=>{})){
         setUser('employee') 
       }
       else{
