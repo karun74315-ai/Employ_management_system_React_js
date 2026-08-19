@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Header = ()=> {
+const Header = ({data})=> {
+  console.log(data);
+  
   return (
     <div className='flex items-end justify-between'>
       
