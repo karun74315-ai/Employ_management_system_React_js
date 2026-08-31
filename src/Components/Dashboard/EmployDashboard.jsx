@@ -9,8 +9,8 @@ const EmployDashboard = ({data})=> {
     <div className='p-10 bg-[#1C1C1C] h-screen '>
       <h1>{data.id}</h1>
       <Header data={data} />
-      <Task  />
-      <TaskList  />
+      <Task  data = {data}/>
+      <TaskList data = {data}  />
     </div>
   )
 }
