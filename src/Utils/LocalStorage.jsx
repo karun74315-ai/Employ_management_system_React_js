@@ -1,9 +1,16 @@
 
-  const employees = [
+  const employee = [
     {
       "id": 1,
+      "firstName": "Aarav",
       "email": "employee1@example.com",
       "password": "123",
+      "taskCounts": {
+        "active": 3,
+        "newTask": 2,
+        "completed": 1,
+        "failed": 1
+      },
       "tasks": [
         {
           "active": true,
@@ -59,8 +66,15 @@
     },
     {
       "id": 2,
+      "firstName": "Vivaan",
       "email": "employee2@example.com",
       "password": "123",
+      "taskCounts": {
+        "active": 3,
+        "newTask": 2,
+        "completed": 1,
+        "failed": 1
+      },
       "tasks": [
         {
           "active": true,
@@ -116,8 +130,15 @@
     },
     {
       "id": 3,
+      "firstName": "Aditya",
       "email": "employee3@example.com",
       "password": "123",
+      "taskCounts": {
+        "active": 3,
+        "newTask": 2,
+        "completed": 1,
+        "failed": 1
+      },
       "tasks": [
         {
           "active": true,
@@ -173,8 +194,15 @@
     },
     {
       "id": 4,
+      "firstName": "Ananya",
       "email": "employee4@example.com",
       "password": "123",
+      "taskCounts": {
+        "active": 3,
+        "newTask": 2,
+        "completed": 1,
+        "failed": 1
+      },
       "tasks": [
         {
           "active": true,
@@ -230,8 +258,15 @@
     },
     {
       "id": 5,
+      "firstName": "Ishita",
       "email": "employee5@example.com",
       "password": "123",
+      "taskCounts": {
+        "active": 3,
+        "newTask": 2,
+        "completed": 1,
+        "failed": 1
+      },
       "tasks": [
         {
           "active": true,
@@ -308,7 +343,7 @@ export const getLocalStorage = ()=>{
   const adminLS = JSON.parse(localStorage.getItem('admin') || 'null')
 
   return {
-    employees: employeesLS ?? employees,
+    employees: employeesLS ?? employee,
     admin: adminLS ?? admin
   }
 }
