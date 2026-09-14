@@ -2,7 +2,7 @@ import React from 'react'
 
 const FailedTask = () => {
   return (
-    <div>
+    
       
     <div className=' shrink-0 h-full w-75 bg-red-400 rounded-xl  p-5  '>
         <div className='flex items-center justify-between  text-sm '>
@@ -19,7 +19,7 @@ const FailedTask = () => {
             </button>
           </div>
      </div>
-    </div>
+    
   )
 }
 

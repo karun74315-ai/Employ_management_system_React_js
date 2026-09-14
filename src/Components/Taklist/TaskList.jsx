@@ -6,13 +6,26 @@ import FailedTask from './FailedTask'
 
 
 const TaskList = ( {data}) => {
+  console.log(data);
   return (
     <div id='taskl' className='h-[55%] overflow-x-auto flex items-center justify-start gap-5 flex-nowrap  w-full py-5  mt-10'>
-
-        <AcceptTask />
-        <NewTask />
-        <CompleteTask />
-        <FailedTask />
+      
+        
+        
+        {data.tasks.map((e)=>{
+          if(e.active){
+            return <AcceptTask />
+          }
+          if(e.newTask){
+            return <NewTask />
+          }
+          if(e.completed){
+            return <CompleteTask />
+          }
+          if(e.failed){
+            <FailedTask />
+          }
+        })}
       
      
 
