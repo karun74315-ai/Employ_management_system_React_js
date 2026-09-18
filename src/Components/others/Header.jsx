@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { setLocalStorage } from '../../Utils/LocalStorage'
 
 const Header = ({data})=> {
+  // const [username, setUsername] = useState('')
+
+  // if(!data){
+
+  //   setUsername('Admin')
+  // }
+  // else{
+  //   setUsername(data.firstName)
+  // }
+
+  const logout = ()=>{
+  localStorage.setItem('LoggedInUser', '')
+  window.location.reload()
+  }
   return (
     <div className='flex items-end justify-between'>
       
@@ -8,7 +23,11 @@ const Header = ({data})=> {
     
     <span className='text-3xl font-semibold'> {data?.firstName ?? 'User'} </span> </h1>
 
-    <button className='bg-red-600 text-lg font-medium text-white px-5 py -2 rounded-sm '> 
+    <button 
+        onClick={()=>{
+           logout()
+        }}
+    className='bg-red-600 text-lg font-medium text-white px-5 py -2 rounded-sm '> 
         Log out
         </button>
 

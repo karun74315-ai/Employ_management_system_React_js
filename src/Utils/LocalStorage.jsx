@@ -334,7 +334,7 @@
 
 // ...existing code...
 export const setLocalStorage = ()=>{
-  localStorage.setItem('employees', JSON.stringify(employees))
+  localStorage.setItem('employees', JSON.stringify(employee))
   localStorage.setItem('admin', JSON.stringify(admin))
 }
 

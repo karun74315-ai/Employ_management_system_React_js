@@ -17,7 +17,9 @@ useEffect(()=>{
     // console.log("user logged in")
 
     const UserData = JSON.parse(LoggedInUser)
-    console.log(UserData)
+    setUser(UserData.role)
+    setloggedInUserData(UserData.data)
+    // console.log(UserData)
   }
 })
 
@@ -44,7 +46,7 @@ useEffect(()=>{
         if(employee){
           setUser({role:'employee'})
           setloggedInUserData(employee)
-          localStorage.setItem('loggedInUser',JSON.stringify({role:'employee'}))
+          localStorage.setItem('loggedInUser',JSON.stringify({role:'employee', data:employee}))
         } else {
           alert('Invalid email or password')
         }
