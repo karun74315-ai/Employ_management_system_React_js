@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Login from './Components/Auth/Login'
 import EmployDashboard from './Components/Dashboard/EmployDashboard'
 import AdminDashboard from './Components/Dashboard/AdminDashboard'
@@ -9,6 +9,12 @@ const   App = ()=> {
 const[user, setUser]  = useState(null)
 const[loggedInUserData, setloggedInUserData] = useState(null)
 const authdata = useContext(Authcontext)
+
+useEffect(()=>{
+   const LoggedInUser = localStorage.getItem('LoggedInUser')
+   console.log(LoggedInUser)
+})
+
 // console.log(authdata)
 
 // useEffect(()=>{
