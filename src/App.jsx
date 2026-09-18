@@ -12,7 +12,13 @@ const authdata = useContext(Authcontext)
 
 useEffect(()=>{
    const LoggedInUser = localStorage.getItem('LoggedInUser')
-   console.log(LoggedInUser)
+  //  console.log(LoggedInUser)
+  if(LoggedInUser){
+    // console.log("user logged in")
+
+    const UserData = JSON.parse(LoggedInUser)
+    console.log(UserData)
+  }
 })
 
 // console.log(authdata)
