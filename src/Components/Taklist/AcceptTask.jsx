@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AcceptTask = () => {
+const AcceptTask = ({data}) => {
   return (
     
       <div className=' shrink-0 h-full w-75 bg-orange-400 rounded-xl  p-5  '>
