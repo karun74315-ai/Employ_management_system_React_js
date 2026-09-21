@@ -2,16 +2,7 @@ import React, { useState } from 'react'
 import { setLocalStorage } from '../../Utils/LocalStorage'
 
 const Header = ({data})=> {
-  // const [username, setUsername] = useState('')
-
-  // if(!data){
-
-  //   setUsername('Admin')
-  // }
-  // else{
-  //   setUsername(data.firstName)
-  // }
-
+  
   const logout = ()=>{
   localStorage.setItem('LoggedInUser', '')
   window.location.reload()

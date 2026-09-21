@@ -60,7 +60,7 @@ useEffect(()=>{
      
     {
       !user ? ( <Login handleLogin={handleLogin} /> ) : (
-        user.role === 'admin' ? <AdminDashboard /> : <EmployDashboard data={loggedInUserData} />
+        user.role === 'admin' ? <AdminDashboard changeUser={setUser} /> : <EmployDashboard data={loggedInUserData}  changeUser={setUser}/>
       )
     }
 
