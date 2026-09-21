@@ -1,28 +1,46 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { Authcontext } from '../../Context/Authprovider'
+
 
 const CreateTask = () => {
-
+     const [UserData, setUserData]  = useContext(Authcontext)
+   
   const [taskTitle, settaskTitle] = useState('')
   const [taskdescription, setDescription] = useState('')
   const [taskDate, settaskDete] = useState('')
   const [Assign, setAssign] = useState('')
   const [Catogery, setCatogery] = useState('')
 
-  const [newTask, setnewTask] = useState({})
-
    const submitHandler= (e)=>{
     e.preventDefault();
-    setnewTask({taskTitle,taskdescription,taskDate,Catogery,active:false,newTask:true,failed:false,completed:false})
-     const  data = JSON.parse(localStorage.getItem('employees'))
+    const task = {
+      taskTitle,
+      taskDescription: taskdescription,
+      taskDate,
+      category: Catogery,
+      active: false,
+      newTask: true,
+      failed: false,
+      completed: false
+    }
 
-     data.forEach(elem => {
-      if(Assign == elem.firstName){
-        
-
-        elem.tasks.push(newTask)
-        console.log(elem)
+    const data = (UserData ?? []).map((employee) => {
+      if (employee.firstName.toLowerCase() !== Assign.trim().toLowerCase()) {
+        return employee
       }
-     });
+
+      return {
+        ...employee,
+        tasks: [...employee.tasks, task],
+        taskCounts: {
+          ...employee.taskCounts,
+          newTask: employee.taskCounts.newTask + 1
+        }
+      }
+    })
+
+    setUserData(data)
+    localStorage.setItem('employees', JSON.stringify(data))
 
     settaskDete("")
     setAssign("")
