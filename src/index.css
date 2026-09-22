@@ -1,12 +1,49 @@
 @import "tailwindcss";
 
-#taskl::-webkit-scrollbar{
-   
-        display: none;
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e5eefb;
+  background: #07111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
 
-#alltsk::-webkit-scrollbar{
-   
-        display: none;
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(16, 185, 129, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0d172a 100%);
+  color: #e5eefb;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#taskl::-webkit-scrollbar,
+#alltsk::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.35);
 }
