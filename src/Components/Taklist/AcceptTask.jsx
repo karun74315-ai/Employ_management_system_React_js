@@ -1,7 +1,7 @@
 
 const AcceptTask = ({ data }) => {
   return (
-    <div className='h-full w-80 shrink-0 rounded-[26px] border border-amber-400/20 bg-gradient-to-br from-amber-500/15 to-slate-900 p-5 shadow-xl shadow-amber-950/20'>
+    <div className='h-full w-80 shrink-0 rounded-[26px] border border-amber-400/20 bg-linear-to-br from-amber-500/15 to-slate-900 p-5 shadow-xl shadow-amber-950/20'>
       <div className='flex items-center justify-between text-xs text-slate-200'>
         <h3 className='rounded-full bg-amber-500/20 px-2.5 py-1 font-medium text-amber-200'>{data.category}</h3>
         <h4>{data.taskDate}</h4>

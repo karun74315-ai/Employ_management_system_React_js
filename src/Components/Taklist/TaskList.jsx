@@ -13,7 +13,7 @@ const TaskList = ({ data }) => {
         <h2 className='mt-2 text-2xl font-semibold text-white'>Your task board</h2>
       </div>
 
-      <div id='taskl' className='flex h-[320px] w-full flex-nowrap items-stretch gap-5 overflow-x-auto pb-2'>
+      <div id='taskl' className='flex h-80 w-full flex-nowrap items-stretch gap-5 overflow-x-auto pb-2'>
         {tasks.map((e, idx) => {
           if (e.active) return <AcceptTask key={idx} data={e} />
           if (e.newTask) return <NewTask key={idx} data={e} />

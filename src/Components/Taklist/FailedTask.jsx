@@ -1,7 +1,7 @@
 
 const FailedTask = ({ data }) => {
   return (
-    <div className='h-full w-80 shrink-0 rounded-[26px] border border-red-500/20 bg-gradient-to-br from-red-500/15 to-slate-900 p-5 shadow-xl shadow-red-950/20'>
+    <div className='h-full w-80 shrink-0 rounded-[26px] border border-red-500/20 bg-linear-to-br from-red-500/15 to-slate-900 p-5 shadow-xl shadow-red-950/20'>
       <div className='flex items-center justify-between text-xs text-slate-200'>
         <h3 className='rounded-full bg-red-500/20 px-2.5 py-1 font-medium text-red-200'>{data.category}</h3>
         <h4>{data.taskDate}</h4>
